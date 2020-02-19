@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row">
+        <br><br><br><br>
+        <div class="col" id=centrado>
+            <div class="row">
+                <h1>Listado de miembros </h1>
+            </div>
+            <div class="row">
+                <h1>Cantidad de miembros: <span> {{infoMembers.length}}</span></h1>
+            </div>
+        </div>
+        <div class="col" id="imagen">
+            <img class="logo" [(src)]="url">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ingrese el nombre o apellido" [(ngModel)]="nameSearch" name="nameSearch">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>House</th>
+                        <th>Role</th>
+                        <th>BloodStatus</th>
+                        <th>species</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let member of infoMembers | filter: nameSearch: 'name'; let i = index ">
+                        <td>
+                            {{i+1}}
+                        </td>
+                        <td>
+                            {{member.name}}
+                        </td>
+                        <td>
+                            {{member.house}}
+                        </td>
+                        <td>
+                            {{member.role}}
+                        </td>
+                        <td>
+                            {{member.bloodStatus}}
+                        </td>
+                        <td>
+                            {{member.species}}
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+        </div>
+
+
+
+    </div>
+
+
+</div>

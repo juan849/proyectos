@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <header>
+            <img class="logo" src="/../assets/img/banner.jpg ">
+        </header>
+    </div>
+    <br><br><br><br>
+    <div class="centrado">
+        <div class="row">
+            <label>Seleccione una casa</label>
+        </div>
+        <div class="row">
+            <select placeholder="Seleccione el tipo de gasto" name="house" (change)="SelectHouse($event)">
+                <option *ngFor='let house of arrayHouse' [value]="house.members">
+                    {{house.name}}
+                </option>
+             </select>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- 
+
+    <div class="container">
+        <header>
+            <img class="logo" src="/../assets/img/banner.jpg ">
+
+        </header>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Seleccione una casa</label>
+                    <select placeholder="Seleccione el tipo de gasto" name="house" (change)="SelectHouse($event)">
+                    <option *ngFor='let house of arrayHouse' [value]="house.members">
+                        {{house.name}}
+                    </option>
+                 </select>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+       <ul>
+        <li>
+            <label>Seleccione una casa</label>
+            <select placeholder="Seleccione el tipo de gasto" name="house" (change)="SelectHouse($event)">
+                <option *ngFor='let house of arrayHouse' [value]="house.members">
+                    {{house.name}}
+                </option>
+             </select>
+        </li>
+
+        <li>
+
+        </li>
+    </ul>
+-->
